@@ -10,6 +10,13 @@ console.log("Sample JavaScript #2 HW #16");
  * lastName – любая фамилия, строка
  * age – любой возраст, число
  */
+var userObj = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 27
+};
+
+console.log(userObj);
 
 /*
  * #2
