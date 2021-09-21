@@ -13,7 +13,10 @@ console.log("Sample JavaScript #2 HW #16");
 var userObj = {
   firstName: "John",
   lastName: "Doe",
-  age: 27
+  age: 27,
+  fullName() {
+    return `${userObj.firstName} ${userObj.lastName}`;
+  },
 };
 
 console.log(userObj);
@@ -29,6 +32,7 @@ console.log(userObj);
  * userObj.lastName ← Фамилия'
  * userObj.fullName() → 'Имя Фамилия'.
  */
+console.log(userObj.fullName());
 
 /*
  * #3
@@ -42,11 +46,15 @@ console.log(userObj);
  *
  * При выполнении задачи не используйте оператор if, требуется решение с логическим оператором ||.
  */
+function defUpperStr(result) {
+  var str = "default text";
 
-/* eslint-disable capitalized-comments */
-// console.log(defUpperStr('My text')); // MY TEXT
+  return (result || str).toUpperCase();
+}
 
-// console.log(defUpperStr()); // DEFAULT TEXT
+console.log(defUpperStr("My text")); // MY TEXT
+
+console.log(defUpperStr()); // DEFAULT TEXT
 
 /*
  * #4
@@ -64,12 +72,30 @@ console.log(userObj);
  * evenFn(15) → [2, 4, 6, 8, 10, 12, 14]
  * evenFn(20) → [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
+function evenFn(n) {
+  for (var i = 0; i < n.length; i + 1) {
+    // console.log(i)
+  }
+  // return n;
+}
 
-// console.log(evenFn(10)); // [2, 4, 6, 8, 10]
+console.log(evenFn(10)); // [2, 4, 6, 8, 10]
 
-// console.log(evenFn(15)); // [2, 4, 6, 8, 10, 12, 14]
+console.log(evenFn(15)); // [2, 4, 6, 8, 10, 12, 14]
 
-// console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+// function generateOdds(len) {
+//   let odd = 2;
+//   let arr = [];
+//   for (let i = 1; i < len.length; i++) {
+//     arr.push(odd);
+//     odd += 2;
+//   }
+//   return arr;
+// }
+
+// console.log(generateOdds(10));
 
 /*
  * #5
