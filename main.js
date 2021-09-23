@@ -73,10 +73,11 @@ console.log(defUpperStr()); // DEFAULT TEXT
  * evenFn(20) → [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
 function evenFn(n) {
-  for (var i = 0; i < n.length; i + 1) {
-    // console.log(i)
-  }
-  // return n;
+ var Array = [];
+
+  for (var i = 0; i <= n; i = i + 2) if (i !== 0) Array.push(i);
+
+  return Array;
 }
 
 console.log(evenFn(10)); // [2, 4, 6, 8, 10]
@@ -84,18 +85,6 @@ console.log(evenFn(10)); // [2, 4, 6, 8, 10]
 console.log(evenFn(15)); // [2, 4, 6, 8, 10, 12, 14]
 
 console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-
-// function generateOdds(len) {
-//   let odd = 2;
-//   let arr = [];
-//   for (let i = 1; i < len.length; i++) {
-//     arr.push(odd);
-//     odd += 2;
-//   }
-//   return arr;
-// }
-
-// console.log(generateOdds(10));
 
 /*
  * #5
