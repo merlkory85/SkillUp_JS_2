@@ -73,7 +73,7 @@ console.log(defUpperStr()); // DEFAULT TEXT
  * evenFn(20) → [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
 function evenFn(n) {
- var Array = [];
+  var Array = [];
 
   for (var i = 0; i <= n; i = i + 2) if (i !== 0) Array.push(i);
 
@@ -100,18 +100,49 @@ console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  *
  * В реализации функции обязательно должны быть использованы операторы switch / case / default.
  */
+function weekFn(n) {
+  var day = "";
 
-// console.log(weekFn(1)); // 'Понедельник'
+  switch (n) {
+    case 1:
+      day = "Понедельник";
+      break;
+    case 2:
+      day = "Вторник";
+      break;
+    case 3:
+      day = "Среда";
+      break;
+    case 4:
+      day = "Четверг";
+      break;
+    case 5:
+      day = "Пятница";
+      break;
+    case 6:
+      day = "Суббота";
+      break;
+    case 7:
+      day = "Воскресенье";
+      break;
+    default:
+      day = null;
+  }
 
-// console.log(weekFn(3)); // 'Среда'
+  return day;
+}
 
-// console.log(weekFn(7)); // 'Воскресенье'
+console.log(weekFn(1)); // 'Понедельник'
 
-// console.log(weekFn(9)); // null
+console.log(weekFn(3)); // 'Среда'
 
-// console.log(weekFn(1.5)); // null
+console.log(weekFn(7)); // 'Воскресенье'
 
-// console.log(weekFn('2')); // null
+console.log(weekFn(9)); // null
+
+console.log(weekFn(1.5)); // null
+
+console.log(weekFn("2")); // null
 
 /*
  * #6
@@ -131,21 +162,45 @@ console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  * Использование операторов if, switch – запрещено.
  */
 
-// console.log('-1 :', ageClassification(-1)); // -1 : null
+function ageClassification(age) {
+  var age;
+  var res = "";
 
-// console.log('5 :', ageClassification(5)); // 5 : детский возраст
+  res =
+    age > 122 || age < 0
+      ? null
+      : age === 122 || age > 90
+      ? "долгожители"
+      : age === 90 || age > 75
+      ? "старческий возраст"
+      : age === 75 || age > 65
+      ? "пожилой возраст"
+      : age === 65 || age > 44
+      ? "средний возраст"
+      : age === 44 || age > 24
+      ? "молодой возраст"
+      : age === 24 || age > 0
+      ? "детский возраст"
+      : null;
 
-// console.log('34 :', ageClassification(34)); // 34 : молодой возраст
+  return res;
+}
 
-// console.log('50 :', ageClassification(50)); // 50 : средний возраст
+console.log("-1 :", ageClassification(-1)); // -1 : null
 
-// console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
+console.log("5 :", ageClassification(5)); // 5 : детский возраст
 
-// console.log('80 :', ageClassification(80)); // 80 : старческий возраст
+console.log("34 :", ageClassification(34)); // 34 : молодой возраст
 
-// console.log('110 :', ageClassification(110)); // 110 : долгожители
+console.log("50 :", ageClassification(50)); // 50 : средний возраст
 
-// console.log('130 :', ageClassification(130)); // 130 : null
+console.log("65.1 :", ageClassification(65.1)); // 65.1 : пожилой возраст
+
+console.log("80 :", ageClassification(80)); // 80 : старческий возраст
+
+console.log("110 :", ageClassification(110)); // 110 : долгожители
+
+console.log("130 :", ageClassification(130)); // 130 : null
 
 /*
  * Блок тестирования:
