@@ -237,12 +237,23 @@ console.log("130 :", ageClassification(130)); // 130 : null
  * oddFn(15) → [1, 3, 5, 7, 9, 11, 13, 15]
  * oddFn(20) → [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
  */
+function oddFn(n) {
+  var num = 0;
+  var arr = [];
+  while (num++ < n) {
+    if (num % 2 !== 0) {
+      arr.push(num);
+    }
+  }
 
-// console.log(oddFn(10)); // [1, 3, 5, 7, 9]
+  return arr;
+}
 
-// console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
+console.log(oddFn(10)); // [1, 3, 5, 7, 9]
 
-// console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
+
+console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
 /*
  * #8
